@@ -3,6 +3,9 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import SettingsIcon from '@mui/icons-material/Settings';
 
+import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
+import {Ecommerce, Orders, Employees, Customers, Calendar, ColorPicker, Editor, Kanban, Area, Bar, ColorMapping, Financial, Line, Pie, Pyramid, Stacked } from './pages';
+
 import './App.css';
 
 function App() {
@@ -24,7 +27,7 @@ function App() {
         </div>
         {activeMenu ? (
           <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg">
-            Sidebar
+            <Sidebar />
           </div>
         ) : (
           <div className="w-0 dark:bg-secondary-dark-bg">Sidebar</div>
@@ -35,36 +38,36 @@ function App() {
           }`}
         >
           <div className="fixed md:static navbar w-full bg-main-bg dark:bg-main-dark-bg">
-            NavBar
+            <Navbar />
           </div>
         </div>
 
         <div>
           <Routes>
             {/* Dashboard */}
-            <Route path='/' element="ECommerce" />
-            <Route path='/ecommerce' element="Home" />
+            <Route path='/' element={<Ecommerce />} />
+            <Route path='/ecommerce' element={<Ecommerce />} />
 
             {/* Pages */}
-            <Route path='/order' element="Order" />
-            <Route path='/employees' element="employees" />
-            <Route path='/customers' element="customers" />
+            <Route path='/order' element={<Orders />} />
+            <Route path='/employees' element={<Employees />} />
+            <Route path='/customers' element={<Customers />} />
 
             {/* Apps */}
-            <Route path='/kanban' element="kanban" />
-            <Route path='/editor' element="editor" />
-            <Route path='/calendar' element="calender" />
-            <Route path='/color-picker' element="color-picker" />
+            <Route path='/kanban' element={<Kanban />} />
+            <Route path='/editor' element={<Editor />} />
+            <Route path='/calendar' element={<Calendar />} />
+            <Route path='/color-picker' element={<ColorPicker />} />
 
-            {/* Apps */}
-            <Route path='/line' element="line" />
-            <Route path='/area' element="area" />
-            <Route path='/bar' element="bar" />
-            <Route path='/chart' element="chart" />
-            <Route path='/pie' element="pie" />
-            <Route path='/color-mapping' element="color-mapping" />
-            <Route path='/pyramid' element="pyramid" />
-            <Route path='/stacked' element="stacked" />
+            {/* Charts */}
+            <Route path='/line' element={<Line />} />
+            <Route path='/area' element={<Area />} />
+            <Route path='/bar' element={<Bar />} />
+            <Route path='/pie' element={<Pie />} />
+            <Route path='/financial' element={<Financial />} />
+            <Route path='/color-mapping' element={<ColorMapping />} />
+            <Route path='/pyramid' element={<Pyramid />} />
+            <Route path='/stacked' element={<Stacked />} />
           </Routes>
         </div>
       </div>
