@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
+// eslint-disable-next-line
 import SettingsIcon from '@mui/icons-material/Settings';
-
+// eslint-disable-next-line
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
 import {Ecommerce, Orders, Employees, Customers, Calendar, ColorPicker, Editor, Kanban, Area, Bar, ColorMapping, Financial, Line, Pie, Pyramid, Stacked } from './pages';
 
@@ -49,7 +50,7 @@ function App() {
             <Route path='/ecommerce' element={<Ecommerce />} />
 
             {/* Pages */}
-            <Route path='/order' element={<Orders />} />
+            <Route path='/orders' element={<Orders />} />
             <Route path='/employees' element={<Employees />} />
             <Route path='/customers' element={<Customers />} />
 
