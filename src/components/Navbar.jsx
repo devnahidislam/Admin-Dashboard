@@ -64,7 +64,7 @@ const Navbar = () => {
           icon={<AiOutlineMenu />}
         />
       </div>
-      <div className="flex ">
+      <div className="flex">
         <NavButton
           title="Cart"
           customFunc={() => handleClick('cart')}
@@ -87,7 +87,7 @@ const Navbar = () => {
         />
         <TooltipComponent content="profile" position="BottomCenter">
           <div
-            className="flex item-center gap-2 p-1 cursor-pointer hover:bg-light-gray rounded-lg"
+            className="flex items-center gap-2 p-1.5 cursor-pointer hover:bg-light-gray rounded-lg"
             onClick={() => handleClick('userProfile')}
           >
             <img src={avatar} className="w-8 h-8 rounded-full" alt="" />
@@ -97,7 +97,7 @@ const Navbar = () => {
                 Nahid Islam
               </span>
             </p>
-            <MdKeyboardArrowDown className="text-gray-400 text-14 mt-1" />
+            <MdKeyboardArrowDown className="text-gray-400 text-14" />
           </div>
         </TooltipComponent>
 
