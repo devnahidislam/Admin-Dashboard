@@ -5,7 +5,7 @@ import {
   Inject,
   Page,
   Search,
-  Toolbar
+  Toolbar,
 } from '@syncfusion/ej2-react-grids';
 import React from 'react';
 import { Header } from '../components';
@@ -27,13 +27,7 @@ const Employee = () => {
             <ColumnDirective key={index} {...item} />
           ))}
         </ColumnsDirective>
-        <Inject
-          services={[
-            Page,
-            Search,
-            Toolbar,
-          ]}
-        />
+        <Inject services={[Page, Search, Toolbar]} />
       </GridComponent>
     </div>
   );
